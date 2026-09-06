@@ -6,7 +6,7 @@ class TransactionEvent(BaseModel):
     transaction_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     timestamp: float
     card_id: str
-    recipient_id: str
+    merchant_id: str
     transaction_type: str
     amount: float = Field(gt=0)
     balance_before: float = Field(ge=0)

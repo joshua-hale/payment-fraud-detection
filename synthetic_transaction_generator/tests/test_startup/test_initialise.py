@@ -7,7 +7,7 @@ from synthetic_transaction_generator.transaction_generator.startup.initialise im
 
 
 def make_config(**overrides) -> SimulationConfig:
-    defaults = dict(n_cards=1000, n_recipients=200, n_mule_accounts=50, random_seed=42)
+    defaults = dict(n_cards=1000, n_merchants=200, n_mule_accounts=50, random_seed=42)
     defaults.update(overrides)
     return SimulationConfig(**defaults)
 
@@ -16,7 +16,7 @@ def test_returns_correct_card_and_recipient_counts():
     config = make_config()
     cards, recipients = initialise(config)
     assert len(cards) == config.n_cards
-    assert len(recipients) == config.n_recipients
+    assert len(recipients) == config.n_merchants
 
 
 def test_correct_number_of_mules_assigned():

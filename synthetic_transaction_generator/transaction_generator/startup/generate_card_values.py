@@ -1,5 +1,4 @@
 from synthetic_transaction_generator.schemas.card_profile import CardProfile
-import random
 import numpy as np
 
 def generate_card_values(n_cards: int) -> dict[str, CardProfile]:
