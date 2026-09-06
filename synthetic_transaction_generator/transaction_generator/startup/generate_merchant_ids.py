@@ -1,4 +1,4 @@
-def generate_recipient_ids(n_recipients: int) -> list[str]:
+def generate_merchant_ids(n_recipients: int) -> list[str]:
     """Generate the specified number of recipient ids"""
 
     recipients = []
